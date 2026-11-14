@@ -1,0 +1,36 @@
+Package: R2GUESS
+Title: Bayesian Variable Selection for Multiple Correlated Outcomes using GUESS
+Version: 0.2.0
+Date: 2026-11-12
+Authors@R:
+    person(given = "Leonardo",
+           family = "Bottolo",
+           role = c("aut", "cre"),
+           email = "lb664@cam.ac.uk")
+Description: R interface to GUESS, a C++ implementation of Evolutionary
+    Stochastic Search (ESS) for sparse Bayesian variable selection in linear
+    regression with one or several correlated outcomes (e.g. multi-tissue gene
+    expression) and many predictors (e.g. SNPs). Provides functions to run
+    GUESS with parallel chains, resume and extend runs, check convergence,
+    summarise marginal posterior probabilities of inclusion and best models,
+    and assess significance by permutation-based false discovery rate. The
+    computationally intensive linear algebra can optionally be offloaded to a
+    GPU through the CULA library; the default CPU build requires only the GNU
+    Scientific Library.
+License: GPL-3 | file LICENSE
+URL: https://github.com/lb664/R2GUESS
+BugReports:
+    https://github.com/lb664/R2GUESS/issues
+biocViews: mixOmics
+Depends:
+    fields (>= 9.6),
+    MCMCpack (>= 1.4.3),
+    methods,
+    mixOmics,
+    mvtnorm (>= 1.0.7),
+    R (>= 3.0.0),
+    snowfall
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: yes
+SystemRequirements: GNU Scientific Library (>= 1.12)
